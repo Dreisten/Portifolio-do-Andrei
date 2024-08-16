@@ -1,0 +1,355 @@
+
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(53, 53, 53);
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00d2ff;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 2.s;
+}
+h2.titulo{
+    color: #fff;
+    font-size: 34pxpx;
+    text-align: center;
+}
+h2.titulo span{
+    color: #00d2ff;
+}
+/* ESTILO DO CABEÇALHO */
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a{
+    color: #7b7b7b;
+    text-decoration: none;
+    display: inline-block;
+}
+header a:hover{
+    color: #fff;
+    transform: scale(1.05);
+}
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px #00d0ffb7;
+    transform: scale(1.05);
+}
+
+
+/* estilo do topo do cabeçalh */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{ 
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #00d2ff;
+    font-size: 40px;
+}
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0;
+}
+
+
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+/* estilo das redes sociais */
+section.redessociais {
+    padding: 40px 4%;
+}
+section.redessociais .flex {
+    gap: 30px;
+}
+.redessociais .interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.redessociais .flex {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.redessociais .redessociais-box {
+    color: #fff;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+.redessociais .redessociais-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ffffff6f;
+}
+.redessociais .redessociais-box a {
+    color: inherit; /* Mantém a cor do texto dentro do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: block; /* Faz com que todo o bloco seja clicável */
+}
+.redessociais .redessociais-box i {
+    font-size: 70px;
+    color: #00d2ff;
+}
+.redessociais .redessociais-box h3 {
+    font-size: 30px;
+}
+
+/* estilo sobre */
+section.sobre{
+    padding: 40px 1%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 30px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+    flex: 1;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: #00d2ff;
+    display: block;
+
+}
+
+.sobre .txt-sobre p{
+    margin: 10px 0;
+    text-align: justify;
+}
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #00d2ff;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.img-sobre img{
+    flex: 1;
+    width: 70%;
+    max-width: 750px;
+    border-radius: 10%;
+}
+/* ESTILO PORTIFOLIO */
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff18;
+}
+section.portifolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size:cover; 
+    /* retirar o background-color e alterar para background-size cover */
+    background-position: 50% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+.img-port:hover{
+    background-position: 50% 50%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1867793e;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #00d2ff;
+    opacity: 0;
+    transition: .5s;
+}
+.overlay:hover{
+    opacity:1;
+}
+/* FORMULARIO */
+section.formulario{
+    padding: 80px 4%;
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+
+
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #334c58a9;
+    border: 0;
+    outline: 0;
+    padding: 25px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+
+
+}
+
+form input::placeholder{
+    color: #00d2ff;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+form .btn-enviar input{
+    width: 120px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+
+}
+/* estilo rodapé */
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff18;
+
+}
+footer .flex{
+    justify-content: space-between;
+
+}
+footer .line-footer{
+    padding: 20px;
+    border-bottom: 4px solid #00d2ff;
+
+}
+footer .line-footer p i{
+    color: #00d2ff;
+    font-size: 40px;
+}
+footer .line-footer p a{
+    color: #fff;
+
+}
+
+/* Tela de loading */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #00d2ff;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
